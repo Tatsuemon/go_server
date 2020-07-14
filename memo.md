@@ -9,3 +9,6 @@
 - json:"-"で出力しない
 - json:"age,omitempty"で空だと出力しない
 (https://golang.org/pkg/encoding/json/#Marshal)
+
+- [2020-07-14 17:44:48]  unsupported destination, should be slice or struct 
+- GetUserができない理由を調べる
