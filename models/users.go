@@ -29,7 +29,7 @@ func GetUser(id int) *User {
 	var user *User
 	a := db.Get().Where("id = ?", id)
 	fmt.Println(a)
-	a.First(&user)
+	a.Find(&user)
 	return user
 }
 
