@@ -1,10 +1,9 @@
 package models
 
 import (
-	"fmt"
 	"strconv"
 
-	"github.com/Tatsuemon/go_server/db"
+	db "github.com/Tatsuemon/go_server/db"
 )
 
 // User defines an user
@@ -21,13 +20,12 @@ func NewUser(name string, age int) *User {
 		Age:  age,
 	}
 	db.Get().Create(user)
-	fmt.Println(*user)
 	return user
 }
 
 func GetUser(id int) *User {
 	var user *User
-	db.Get().Debug().Where("ID = ?", "1").Find(&user)
+	db.Get().Debug().Where("ID = ?", id).First(user)
 	return user
 }
 
