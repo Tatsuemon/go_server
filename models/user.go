@@ -1,16 +1,15 @@
-package main
+package models
 
-import (
-	"fmt"
-	"strconv"
-)
+import "strconv"
 
+// User defines an user
 type User struct {
 	ID   int
 	Name string
 	Age  int
 }
 
+// NewUser creates user instance
 func NewUser(name string, age int) *User {
 	return &User{
 		Name: name,
@@ -20,9 +19,4 @@ func NewUser(name string, age int) *User {
 
 func (u *User) String() string {
 	return u.Name + "(" + strconv.Itoa(u.Age) + ")"
-}
-
-func main() {
-	user := NewUser("Naoyoshi Aikawa", 29)
-	fmt.Println(user)
 }
