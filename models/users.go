@@ -26,9 +26,11 @@ func NewUser(name string, age int) *User {
 }
 
 func GetUser(id int) *User {
-	// var user *User
-	return db.Get().Where("id = ?", id)
-	// return user
+	var user *User
+	a := db.Get().Where("id = ?", id)
+	fmt.Println(a)
+	a.First(&user)
+	return user
 }
 
 func AllUsers() []*User {
