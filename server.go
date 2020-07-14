@@ -22,7 +22,7 @@ func main() {
 	})
 
 	mux.HandleFunc("/show", func(w http.ResponseWriter, req *http.Request) {
-		user := models.GetUser(1)
+		user := models.GetUser(3)
 		ren.JSON(w, http.StatusOK, user)
 	})
 

@@ -27,7 +27,7 @@ func NewUser(name string, age int) *User {
 
 func GetUser(id int) *User {
 	var user *User
-	a := db.Get().Where("id = ?", id)
+	a := db.Get().Where("ID = ?", id)
 	fmt.Println(a)
 	a.Find(&user)
 	return user
